@@ -28,8 +28,10 @@ mongoose
     `mongodb+srv://${dbUser}:${dbPass}@cluster0.psbecnn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(() => {
-    app.listen(5555);
-    console.log("Conectou ao banco");
+    app.listen(5555, () => {
+      console.log("Projeto escutando na porta 5555.");
+    });
+    console.log("Conectou ao banco de dados.");
   })
   .catch((err) => console.log(err));
 
